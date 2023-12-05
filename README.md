@@ -1,5 +1,7 @@
 # Розрахунково-графічна робота. Telegram: @t3ry444y
-### Створення додатку бази даних, орієнтованого на взаємодію з СУБД PostgreSQL [Посилання на звіт](https://docs.google.com/document/d/e/2PACX-1vTTXDzZetJu_zmB6CjE0UQXWYLUFVgFP1_eFrIPIVKWopyR2QHyQatH1rUMPFUt8dJGnMetsQx7vP1x/pub)
+### Створення додатку бази даних, орієнтованого на взаємодію з СУБД PostgreSQL 
+[Посилання на звіт](https://docs.google.com/document/d/e/2PACX-1vTTXDzZetJu_zmB6CjE0UQXWYLUFVgFP1_eFrIPIVKWopyR2QHyQatH1rUMPFUt8dJGnMetsQx7vP1x/pub, "Посилання на звіт")
+
 ![Alt text](https://github.com/73794449/databasergr/blob/main/scheme.png)
 
 #### В моделі предметної області, що задана, виділяються наступні сутності та зв’язки між ними:
