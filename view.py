@@ -10,7 +10,10 @@ class View(object):
             for table in tables:
                 print(str(table) + ") " + tables[table][1])
 
-            num = int(input("Enter number: "))
+            inp = None
+            while inp is None or inp == '':
+                inp = input("Input number: ")
+            num = int(inp)
 
         return num
 
@@ -22,7 +25,7 @@ class View(object):
     def show_menu():
         num = -1
         while not (num > 0 & num < 9):
-            print("\n\n\n\n\nMenu: ")
+            print("\nMenu: ")
             print("1) View table")
             print("2) View all tables")
             print("3) Add to table")
@@ -31,7 +34,10 @@ class View(object):
             print("6) Randomize table")
             print("7) Search")
             print("8) Exit")
-            num = int(input("Enter number: "))
+            inp = None
+            while inp is None or inp == '':
+                inp = input("Input number: ")
+            num = int(inp)
         return num
 
     @staticmethod
@@ -44,13 +50,19 @@ class View(object):
         entered_params = {}
         for param in params:
             print(str(param) + ") " + params[param])
-            entered_params[param] = input("Input value: ")
+            inp = None
+            while inp is None or inp == '':
+                inp = input("Input value: ")
+            entered_params[param] = inp
 
         return entered_params
 
     @staticmethod
     def get_id():
-        return int(input("Enter id: "))
+        inp = None
+        while inp is None or inp == '':
+            inp = input("Enter id: ")
+        return int(inp)
 
     @staticmethod
     def show_params_menu_selection(params):
@@ -59,17 +71,26 @@ class View(object):
         while not (list(params)[0] <= num <= list(params)[-1]):
             for param in params:
                 print(str(param) + ") " + params[param])
-            num = int(input("Enter number: "))
+            inp = None
+            while inp is None or inp == '':
+                inp = input("Enter number: ")
+            num = int(inp)
 
         return num
 
     @staticmethod
     def get_param(param):
-        return input("Input value for {}: ".format(param))
+        inp = None
+        while inp is None or inp == '':
+            inp = input("Input value for {}: ".format(param))
+        return inp
 
     @staticmethod
     def show_random_menu():
-        return int(input("Input count of random elements: "))
+        inp = None
+        while inp is None or inp == '':
+            inp = input("Input count of random elements: ")
+        return int(inp)
 
     @staticmethod
     def show_execution_time(time):
@@ -77,11 +98,11 @@ class View(object):
 
     @staticmethod
     def show_sql_error(error):
-        print("Got error:\n", error)
+        print("Got error from server:\n", error)
 
     @staticmethod
     def show_sanity_error():
-        print("Entered value is not correct")
+        print("Entered value(s) is(are) not correct")
 
     @staticmethod
     def show_connection_error():

@@ -9,29 +9,26 @@ class Controller:
         self.view = View()
         try:
             self.model = Model(connection_settings)
-        except psycopg2.Error as error:
+        except psycopg2.Error:
             self.view.show_connection_error()
             exit(-1)
 
     def run(self):  # Menu
+        menu = {
+            1: self.view_table,
+            2: self.view_all_tables,
+            3: self.add_table,
+            4: self.delete_table,
+            5: self.delete_table,
+            6: self.randomize_table,
+            7: self.search
+        }
         while True:
             choice = self.view.show_menu()
-            if choice == 1:
-                self.view_table()
-            elif choice == 2:
-                self.view_all_tables()
-            elif choice == 3:
-                self.add_table()
-            elif choice == 4:
-                self.delete_table()
-            elif choice == 5:
-                self.edit_table()
-            elif choice == 6:
-                self.randomize_table()
-            elif choice == 7:
-                self.search()
-            elif choice == 8:
+            if choice == 8:
                 break
+            elif choice in menu:
+                menu[choice]()
 
     def view_table(self):
         try:
@@ -70,7 +67,9 @@ class Controller:
             self.view.show_table(table)
             self.view.show_msg("Select id to delete: ")
             id_to_delete = self.view.get_id()
-            self.model.delete_table(selected, id_to_delete)
+            Verification = self.model.delete_table(selected, id_to_delete)
+            if not Verification:
+                self.view.show_sanity_error()
         except psycopg2.Error as error:
             self.view.show_sql_error(error)
 

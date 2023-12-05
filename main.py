@@ -8,6 +8,6 @@ connection_settings = {
     'port': 5432
 }
 
-if __name__ == '__main__':      # Startup controller
+if __name__ == '__main__':  # Startup controller
     controller = Controller(connection_settings)
     controller.run()
