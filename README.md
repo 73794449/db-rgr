@@ -1,6 +1,6 @@
 # Розрахунково-графічна робота. Telegram: @t3ry444y
 ### Створення додатку бази даних, орієнтованого на взаємодію з СУБД PostgreSQL 
-[Посилання на звіт](https://docs.google.com/document/d/e/2PACX-1vTTXDzZetJu_zmB6CjE0UQXWYLUFVgFP1_eFrIPIVKWopyR2QHyQatH1rUMPFUt8dJGnMetsQx7vP1x/pub, "Посилання на звіт")
+[Посилання на звіт](https://docs.google.com/document/d/1i4MimRQI8oAtJA6kLX3CryJXY1A3Ib75J94mgR02G1g/edit?usp=sharing, "Посилання на звіт")
 
 ![Alt text](https://github.com/73794449/databasergr/blob/main/scheme.png)
 
